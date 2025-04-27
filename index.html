@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Deepu Y B</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary-bg: #f8d7e5;
+      --card-bg: #ffffff;
+      --accent: #333;
+      --link: #ff6fb6;
+    }
+
+    * {
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background-color: var(--primary-bg);
+      color: var(--accent);
+    }
+
+    nav {
+      background-color: var(--card-bg);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 40px;
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 999;
+      height: 80px;
+    }
+
+    .logo a {
+      text-decoration: none;
+      color: inherit;
+      font-size: 20px;
+      font-weight: 600;
+    }
+
+    .logo a span {
+      font-size: 14px;
+      font-weight: 400;
+      display: block;
+    }
+
+    .nav-links a {
+      margin-left: 30px;
+      text-decoration: none;
+      color: var(--accent);
+      font-weight: 500;
+      transition: color 0.3s ease;
+    }
+
+    .nav-links a:hover {
+      color: var(--link);
+    }
+
+    .hero {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding-top: 140px;
+      padding-bottom: 60px;
+    }
+
+    .hero h1 {
+      font-size: 48px;
+      margin-bottom: 20px;
+    }
+
+    .hero p {
+      font-size: 20px;
+      max-width: 700px;
+      line-height: 1.6;
+    }
+
+    /* Profile Pic Styling */
+    .profile-pic {
+      display: flex;
+      justify-content: center;
+      margin-top: -30px;
+      margin-bottom: 40px;
+      position: relative;
+      transition: all 0.6s ease; /* smooth transition */
+      z-index: 998;
+    }
+
+    .profile-pic img {
+      width: 180px;
+      height: 180px;
+      object-fit: cover;
+      border-radius: 50%;
+      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+      border: 4px solid var(--card-bg);
+      transition: all 0.6s ease; /* smooth image transition */
+    }
+
+    .profile-pic.fixed {
+      position: fixed;
+      top: 50%;
+      left: 40px;
+      transform: translateY(-50%);
+      justify-content: flex-start;
+      align-items: center;
+    }
+
+    .profile-pic.fixed img {
+      width: 120px;
+      height: 120px;
+    }
+
+    .section {
+      background-color: var(--card-bg);
+      padding: 60px 20px;
+      max-width: 900px;
+      margin: 40px auto;
+      border-radius: 16px;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+    }
+
+    .section h2 {
+      font-size: 32px;
+      margin-bottom: 20px;
+      color: var(--link);
+    }
+
+    .section p, .section a {
+      font-size: 18px;
+      line-height: 1.8;
+      color: var(--accent);
+    }
+
+    .section a {
+      text-decoration: none;
+      color: var(--link);
+      font-weight: 500;
+    }
+
+    .section a:hover {
+      text-decoration: underline;
+    }
+
+    footer {
+      background-color: var(--card-bg);
+      text-align: center;
+      padding: 20px;
+      font-size: 16px;
+      box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.05);
+      margin-top: 60px;
+    }
+
+    ul {
+      padding-left: 20px;
+    }
+
+    ul li {
+      margin-bottom: 12px;
+    }
+
+    @media (max-width: 768px) {
+      .nav-links a {
+        margin-left: 15px;
+        font-size: 14px;
+      }
+
+      .hero h1 {
+        font-size: 32px;
+      }
+
+      .hero p {
+        font-size: 16px;
+      }
+
+      .section h2 {
+        font-size: 26px;
+      }
+
+      .section p {
+        font-size: 16px;
+      }
+
+      .profile-pic img {
+        width: 140px;
+        height: 140px;
+      }
+
+      .profile-pic.fixed img {
+        width: 100px;
+        height: 100px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav>
+  <div class="logo">
+    <a href="#hero">
+      Deepu Y B
+      <span>Computer Science student</span>
+    </a>
+  </div>
+  <div class="nav-links">
+    <a href="#about">About Me</a>
+    <a href="#resume">Resume</a>
+    <a href="#contact">Contact</a>
+  </div>
+</nav>
+
+<!-- Hero -->
+<section id="hero" class="hero">
+  <h1>Hello, I'm Deepu 👋</h1>
+  <p>I'm a Computer Science & Business Systems (CSBS) student and an aspiring professional passionate about building impactful products.</p>
+</section>
+
+<!-- Profile Picture -->
+<div class="profile-pic">
+  <img src="IMG_3115.JPG" alt="Deepu's Profile Picture">
+</div>
+
+<!-- About -->
+<section id="about" class="section">
+  <h2>About Me</h2>
+  <p>
+    Hey there! I’m a 4th-semester Computer Science & Business Systems (CSBS) student at Malnad College of Engineering. 
+    Growing up surrounded by farm life taught me the values of hard work and perseverance. 
+    Now living in the college hostel away from home, I am driven by my passion for technology, coding, and creativity. 
+    I enjoy managing my YouTube channel, exploring new tech trends, and continuously challenging myself to grow. 
+    I believe in staying dedicated, learning every day, and building a future filled with meaningful innovations.
+  </p>
+</section>
+
+<!-- Resume -->
+<section id="resume" class="section">
+  <h2>Resume</h2>
+  <p><strong>Deepu Y B</strong> | Computer Science & Business Systems Student</p>
+  <li><strong>Permanent Address:</strong> Kadur, Chikkamagaluru District, Karnataka</li>
+  <li><strong>Current Address:</strong> Hassan, Hassan District, Karnataka</li>
+  <br/>
+  <p><strong>Skills:</strong></p>
+  <ul>
+    <li><strong>Programming Languages:</strong> C, C++, Python, HTML, Java</li>
+    <li><strong>Libraries/Frameworks:</strong> TensorFlow, PyTorch, scikit-learn, Keras</li>
+    <li><strong>Tools / Platforms:</strong> NumPy, Pandas, Matplotlib, Seaborn, Jupyter Notebook, VS Code, Google Colab, Anaconda, APIs (REST), Docker</li>
+    <li><strong>Databases:</strong> SQL, MongoDB</li>
+  </ul>
+  <br/>
+  <p><strong>Education:</strong></p>
+  <ul>
+    <li>Morarji Desai Residential School, Chikkamagaluru, Karnataka – High School (2018 - 2021)</li>
+    <li>Sri BGS PU College, Chikkamagaluru, Karnataka – Science (PCMB) Pre-University (2021 - 2023)</li>
+    <li>Malnad College Of Engineering, Hassan, Karnataka – B.E. in Computer Science and Business Systems (2023 - Present)</li>
+  </ul>
+</section>
+
+<!-- Contact -->
+<section id="contact" class="section">
+  <h2>Contact</h2>
+  <p><strong>Phone:</strong> 7204448242</p>
+  <p><strong>Email:</strong> <a href="mailto:gowdadeepu638@gmail.com">gowdadeepu638@gmail.com</a></p>
+  <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/deepu-y-b-4a1358315/" target="_blank">Visit Profile</a></p>
+  <p>I'm open for internships and exciting opportunities!</p>
+  <div style="margin-top: 30px; display: flex; justify-content: center;">
+    <img src="3227dd38-f51b-47d8-aec8-0bab39b9384e.jpg" alt="Deepu Contact" style="max-width: 300px; width: 100%; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
+  </div>
+</section>
+
+
+<!-- Footer -->
+<footer>
+  <p>Made with 💖 by Deepu Y B</p>
+</footer>
+
+<!-- Smooth Scroll Script for Profile Pic -->
+<script>
+  const profilePic = document.querySelector('.profile-pic');
+
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 200) {
+      profilePic.classList.add('fixed');
+    } else {
+      profilePic.classList.remove('fixed');
+    }
+  });
+</script>
+
+</body>
+</html>
