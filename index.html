@@ -92,7 +92,7 @@
       margin-top: -30px;
       margin-bottom: 40px;
       position: relative;
-      transition: all 0.6s ease; /* smooth transition */
+      transition: all 0.6s ease;
       z-index: 998;
     }
 
@@ -103,7 +103,7 @@
       border-radius: 50%;
       box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
       border: 4px solid var(--card-bg);
-      transition: all 0.6s ease; /* smooth image transition */
+      transition: all 0.6s ease;
     }
 
     .profile-pic.fixed {
@@ -118,6 +118,24 @@
     .profile-pic.fixed img {
       width: 120px;
       height: 120px;
+    }
+
+    /* Responsive Adjustments for Smaller Screens */
+    @media (max-width: 768px) {
+      .profile-pic {
+        margin-top: 0;
+        position: relative;
+        margin-bottom: 20px;
+        width: 140px;
+        height: 140px;
+      }
+
+      .profile-pic img {
+        width: 100%;
+        height: auto;
+        box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+        border-radius: 50%;
+      }
     }
 
     .section {
@@ -167,39 +185,6 @@
     ul li {
       margin-bottom: 12px;
     }
-
-    @media (max-width: 768px) {
-      .nav-links a {
-        margin-left: 15px;
-        font-size: 14px;
-      }
-
-      .hero h1 {
-        font-size: 32px;
-      }
-
-      .hero p {
-        font-size: 16px;
-      }
-
-      .section h2 {
-        font-size: 26px;
-      }
-
-      .section p {
-        font-size: 16px;
-      }
-
-      .profile-pic img {
-        width: 140px;
-        height: 140px;
-      }
-
-      .profile-pic.fixed img {
-        width: 100px;
-        height: 100px;
-      }
-    }
   </style>
 </head>
 <body>
@@ -227,7 +212,7 @@
 
 <!-- Profile Picture -->
 <div class="profile-pic">
-  <img src="IMG_3115.JPG" alt="Deepu's Profile Picture">
+  <img src="profile.jpg" alt="Deepu's Profile Picture">
 </div>
 
 <!-- About -->
@@ -277,24 +262,12 @@
   </div>
 </section>
 
-
 <!-- Footer -->
 <footer>
   <p>Made with 💖 by Deepu Y B</p>
 </footer>
 
-<!-- Smooth Scroll Script for Profile Pic -->
-<script>
-  const profilePic = document.querySelector('.profile-pic');
 
-  window.addEventListener('scroll', () => {
-    if (window.scrollY > 200) {
-      profilePic.classList.add('fixed');
-    } else {
-      profilePic.classList.remove('fixed');
-    }
-  });
-</script>
 
 </body>
 </html>
